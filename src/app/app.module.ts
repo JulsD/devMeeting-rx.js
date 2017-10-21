@@ -8,17 +8,19 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrderByPipe
+    OrderByPipe,
   ],
   imports: [
     BrowserModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

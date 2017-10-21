@@ -13,3 +13,14 @@
     {{ item.body }}
   </li>
 </ul>
+<form novalidate (ngSubmit)="onSubmit(message)" [formGroup]="message">
+  <label>
+    <span>Full name</span>
+    <input type="text" placeholder="Your full name" formControlName="sender">
+  </label>
+  <label>
+    <span>Print text</span>
+    <input type="text" placeholder="Print text" formControlName="body">
+  </label>
+  <button type="submit" [disabled]="message.invalid">Sign up</button>
+</form>
